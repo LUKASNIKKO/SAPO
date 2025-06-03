@@ -100,7 +100,7 @@ if (isset($update["message"])) {
 
 function sendMessage($chat_id, $text, $markdown = false) {
 
-    global $API_URL;
+    global $website;
 
     $data = [
 
@@ -116,7 +116,7 @@ function sendMessage($chat_id, $text, $markdown = false) {
 
     }
 
-    file_get_contents($API_URL . "sendMessage?" . http_build_query($data));
+    file_get_contents($website . "sendMessage?" . http_build_query($data));
 
 }
 
